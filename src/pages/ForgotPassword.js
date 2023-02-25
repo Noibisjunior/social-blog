@@ -2,6 +2,7 @@ import  { useState } from 'react';
 import {getAuth,sendPasswordResetEmail} from 'firebase/auth'
 import {toast} from "react-toastify"
 import { useNavigate } from 'react-router-dom';
+import OAuth from '../components/Oauth';
 
 export default function ForgotPassword() {
   const navigate = useNavigate()
@@ -55,7 +56,7 @@ export default function ForgotPassword() {
 
                 <button
                   type="submit"
-                  className="btn btn-dark mt-10 px-2 py-3 "
+                  className="btn btn-primary mt-10 px-2 py-3 "
                   id="space"
                 >
                   Send Reset instructions
@@ -75,6 +76,7 @@ export default function ForgotPassword() {
                     </span>
                   </p>
                 </div>
+                <OAuth/>
                 {/* <div
                   className="my-4 items-center before:border-t flex
                before:flex-1

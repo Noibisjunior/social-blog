@@ -9,6 +9,7 @@ import React, { useState } from 'react';
 import { toast } from 'react-toastify';
 import { auth } from '../firebase';
 import { useNavigate } from 'react-router-dom';
+import OAuth from '../components/Oauth';
 
 const initialState = {
   firstName: '',
@@ -211,6 +212,7 @@ const Auth = ({ setActive, setUser }) => {
                     </div>
                   </>
                 )}
+                <OAuth/>
               </div>
             </div>
           </div>
